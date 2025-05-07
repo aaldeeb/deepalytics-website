@@ -1,0 +1,25 @@
+{
+  "heading": "Demonstrating Impact: Our Success Stories",
+  "intro": "We believe in the power of data to drive tangible results. While specific client engagements are confidential, these representative case studies illustrate the types of challenges we solve and the value we deliver within the energy and utilities sector.",
+  "ctaText": "Discuss Your Challenges",
+  "studies": [
+    {
+      "title": "Case Study 1",
+      "image": "/assets/images/cs1.jpg",
+      "excerpt": "Predictive model cut outages by 15%.",
+      "detail": "Deepalytics developed a predictive analytics model integrating real-time sensor data, weather forecasts, and historical load patterns. The model provided operators with accurate short-term load forecasts and identified potential stress points on the grid, enabling proactive adjustments and targeted upgrades."
+    },
+    {
+      "title": "Case Study 2",
+      "image": "/assets/images/cs2.jpg",
+      "excerpt": "7% portfolio return increase.",
+      "detail": "We built a machine-learning market analysis platform analyzing historical prices, geopolitical factors, and supply/demand. It generated probabilistic forecasts and risk reports, improving trading accuracy and boosting returns by 7% in year one."
+    },
+    {
+      "title": "Case Study 3",
+      "image": "/assets/images/cs3.jpg",
+      "excerpt": "10% drop in customer churn.",
+      "detail": "Our customer segmentation analysis identified churn drivers and flagged at-risk users. Targeted retention campaigns and personalized communications cut churn by 10% and raised satisfaction scores measurably."
+    }
+  ]
+}

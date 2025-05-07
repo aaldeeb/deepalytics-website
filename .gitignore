@@ -1,0 +1,32 @@
+# Node dependencies
+node_modules/
+
+# Eleventy output folder
+_site/*
+!_site/css/
+
+# Local environment
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Optional: Tailwind build artifacts if outside _site
+dist/
+*.tmp
+.cache/
+
+# Mac/Linux file metadata
+*.swp
+*.swo

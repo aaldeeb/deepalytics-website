@@ -1,0 +1,86 @@
+<section id="services" class="min-h-screen bg-[--color-surface] py-20 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[--color-accent] mb-6">
+      {{ services.heading }}
+    </h2>
+    <p class="text-lg text-[--color-text] mb-12">
+      {{ services.intro }}
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for service in services.items %}
+      <div
+        class="bg-[--color-background] p-6 rounded-lg shadow-md text-left transform transition-transform duration-300 cursor-pointer hover:scale-105 hover:shadow-xl"
+        data-title="{{ service.title | escape }}"
+        data-detail="{{ service.details | join('\n') | escape }}"
+      >
+        <h3 class="text-xl font-semibold text-[--color-accent] mb-2">{{ service.title }}</h3>
+        <ul class="list-disc list-inside space-y-2 text-[--color-muted]">
+          {% for item in service.details %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Modal Dialog -->
+  <dialog id="service-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-0 m-0 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="relative bg-white rounded-lg overflow-hidden shadow-lg w-11/12 max-w-2xl transform scale-90 transition-transform duration-300">
+      <button id="service-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+      <div class="p-6">
+        <h3 id="service-modal-title" class="text-2xl font-semibold mb-4"></h3>
+        <ul id="service-modal-detail" class="list-disc list-inside space-y-2 text-gray-700"></ul>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("service-modal");
+      const titleEl = document.getElementById("service-modal-title");
+      const detailEl = document.getElementById("service-modal-detail");
+      const closeBtn = document.getElementById("service-close");
+
+      document.querySelectorAll("[data-detail]").forEach(card => {
+        card.addEventListener("click", () => {
+          titleEl.textContent = card.getAttribute("data-title");
+
+          // Clear and populate detail list
+          detailEl.innerHTML = "";
+          const lines = card.getAttribute("data-detail").split("\n");
+          lines.forEach(line => {
+            const li = document.createElement("li");
+            li.textContent = line;
+            detailEl.appendChild(li);
+          });
+
+          // Show modal
+          modal.showModal();
+          modal.classList.remove('opacity-0','pointer-events-none');
+          modal.classList.add('opacity-100');
+          const inner = modal.querySelector('div');
+          inner.classList.remove('scale-90');
+          inner.classList.add('scale-100');
+        });
+      });
+
+      const closeModal = () => {
+        const inner = modal.querySelector('div');
+        modal.classList.remove('opacity-100');
+        inner.classList.remove('scale-100');
+        inner.classList.add('scale-90');
+        setTimeout(() => {
+          modal.classList.add('opacity-0','pointer-events-none');
+          modal.close();
+        }, 300);
+      };
+
+      closeBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", e => {
+        if (e.target === modal) closeModal();
+      });
+    });
+  </script>
+</section>

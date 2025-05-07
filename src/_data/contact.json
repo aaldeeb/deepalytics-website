@@ -1,0 +1,21 @@
+{
+    "heading": "Let's Connect & Explore Opportunities",
+    "intro": "Ready to discuss how Deepalytics can help your organization leverage data for success in the energy and utilities sector? We offer multiple ways to get in touch.",
+    "chat": {
+      "heading": "Instant Chat",
+      "description": "Have a quick question? Use our AI-powered chat assistant available 24/7 to get instant answers about our services and expertise.",
+      "embedPlaceholder": "[Chatbase Widget Embed Area]"
+    },
+    "calendly": {
+      "heading": "Schedule a Consultation",
+      "description": "Book a free, no-obligation consultation call directly into our calendar using the Calendly scheduler below. Choose a time that works best for you to discuss your specific needs and challenges in detail.",
+      "embedPlaceholder": "[Calendly Embed Area]"
+    },
+    "direct": {
+      "heading": "Direct Contact",
+      "email": "info@deepalytics.co.uk",
+      "phone": "+44 7437443453",
+      "location": "London, UK"
+    },
+    "footerNote": "We look forward to hearing from you and exploring how data-driven insights can empower your business."
+  }  

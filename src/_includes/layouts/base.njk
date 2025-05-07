@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deepalytics</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-[--color-background] text-[--color-text] antialiased">
+  <header class="bg-[--color-surface] text-[--color-text] py-4 px-6 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-semibold tracking-wide">Deepalytics</h1>
+      <nav class="space-x-4">
+        <a href="#services" class="hover:text-[--color-accent]">Services</a>
+        <a href="#case-studies" class="hover:text-[--color-accent]">Case Studies</a>
+        <a href="#contact" class="hover:text-[--color-accent]">Contact</a>
+        <button
+          id="darkToggle"
+          class="ml-4 text-sm bg-[--color-accent] text-[--color-background] px-3 py-1 rounded hover:opacity-90"
+        >
+          Toggle Theme
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  {% include "components/hero.njk" %}
+  {% include "components/about.njk" %}
+  {% include "components/services.njk" %}
+  {% include "components/case-studies.njk" %}
+  {% include "components/contact.njk" %}
+
+  <footer class="bg-[--color-surface] text-[--color-muted] py-10">
+    <div class="max-w-6xl mx-auto px-4 md:flex md:justify-between md:items-center text-center md:text-left">
+      <div class="mb-6 md:mb-0">
+        <h4 class="text-lg font-semibold text-[--color-accent] mb-2">Deepalytics</h4>
+        <p class="text-sm text-[--color-muted]">Empowering the energy and utilities sector through data.</p>
+      </div>
+      <div class="space-x-4 text-sm">
+        <a href="#services" class="hover:text-[--color-accent]">Services</a>
+        <a href="#case-studies" class="hover:text-[--color-accent]">Case Studies</a>
+        <a href="#contact" class="hover:text-[--color-accent]">Contact</a>
+      </div>
+    </div>
+    <div class="mt-6 text-center text-xs text-[--color-muted]">
+      &copy; {{ now | date("yyyy") }} Deepalytics. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+    const button = document.getElementById('darkToggle');
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') html.classList.add('dark');
+
+    button.addEventListener('click', () => {
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
