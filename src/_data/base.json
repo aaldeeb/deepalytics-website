@@ -1,0 +1,18 @@
+{
+    "title": "Deepalytics",
+    "logo": {
+      "src": "/assets/images/logo.jpg",
+      "alt": "Deepalytics logo"
+    },
+    "nav": {
+      "services": "Services",
+      "caseStudies": "Case Studies",
+      "contact": "Contact"
+    },
+    "footer": {
+      "title": "Deepalytics",
+      "tagline": "Empowering the energy and utilities sector with value-driven analytics.",
+      "copyright": "Deepalytics. All rights reserved."
+    }
+  }
+  

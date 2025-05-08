@@ -1,21 +1,13 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind typography;
 
-/* LIGHT MODE (default) */
 @theme {
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-text: #1e293b;
-  --color-muted: #64748b;
-  --color-accent: #d4af37;
-}
-
-/* DARK MODE overrides using class */
-@layer base {
-  html.dark {
-    --color-background: #0d1b2a;  /* deep navy */
-    --color-surface: #1b263b;     /* charcoal */
-    --color-text: #f1f5f9;        /* light text */
-    --color-muted: #94a3b8;       /* soft grey */
-    --color-accent: #d4af37;      /* soft gold */
-  }
+  --color-background: #0d1b2a;  /* deep navy */
+  --color-surface: #1b263b;     /* charcoal */
+  --color-text: #f1f5f9;        /* light text */
+  --color-muted: #94a3b8;       /* soft grey */
+  --color-accent: #d4af37;      /* soft gold */
 }
