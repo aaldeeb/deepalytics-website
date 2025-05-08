@@ -2,19 +2,14 @@
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-[--color-accent] mb-6">{{ contact.heading }}</h2>
     <p class="text-lg text-[--color-text] mb-12">{{ contact.intro }}</p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-left">
-      <!-- Chatbase Integration -->
-      <div class="bg-[--color-background] p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-[--color-accent] mb-3">{{ contact.chat.heading }}</h3>
-        <p class="text-[--color-muted] mb-4">{{ contact.chat.description }}</p>
-        <div class="bg-[--color-surface] h-40 flex items-center justify-center rounded text-gray-300">{{ contact.chat.embedPlaceholder }}</div>
-      </div>
-      <!-- Calendly Integration -->
+    
       <div class="bg-[--color-background] p-6 rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-[--color-accent] mb-3">{{ contact.calendly.heading }}</h3>
         <p class="text-[--color-muted] mb-4">{{ contact.calendly.description }}</p>
-        <div class="bg-[--color-surface] h-40 flex items-center justify-center rounded text-gray-300">{{ contact.calendly.embedPlaceholder }}</div>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/ahmed-aldeeb/15min?hide_event_type_details=1" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
       </div>
     </div>
 
@@ -28,5 +23,5 @@
     </div>
 
     <p class="text-lg text-[--color-text]">{{ contact.footerNote }}</p>
-  </div>
+  
 </section>
