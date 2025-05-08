@@ -1,5 +1,7 @@
 # Node dependencies
+_site/
 node_modules/
+src/
 
 # Local environment
 .env
