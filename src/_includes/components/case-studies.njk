@@ -40,7 +40,7 @@
   </div>
 
   <!-- Centered Modal with animation -->
-  <dialog id="cs-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-0 m-0 opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+  <dialog id="cs-modal" class="fixed inset-0 w-full h-full border-0 flex items-center justify-center p-0 m-0 opacity-0 pointer-events-none transition-opacity duration-300 z-50">
     <div class="relative bg-[--color-background] text-[--color-text] rounded-lg overflow-hidden shadow-xl w-11/12 max-w-2xl transform scale-90 transition-transform duration-300">
       <button id="cs-close" class="absolute top-4 right-4 text-[--color-muted] hover:text-[--color-accent] text-2xl leading-none">&times;</button>
       <div class="p-6">
@@ -58,7 +58,7 @@
       const closeBtn = document.getElementById("cs-close");
 
       // Open modal
-      document.querySelectorAll("[data-detail]").forEach(card => {
+      document.querySelectorAll("#case-studies [data-detail]").forEach(card => {
         card.addEventListener("click", () => {
           titleEl.textContent = card.getAttribute("data-title");
           detailEl.textContent = card.getAttribute("data-detail");
