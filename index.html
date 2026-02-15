@@ -129,7 +129,7 @@
   </div>
 
   <!-- Modal Dialog -->
-  <dialog id="service-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-0 m-0 opacity-0 pointer-events-none transition-opacity duration-300">
+  <dialog id="service-modal" class="fixed inset-0 w-full h-full border-0 flex items-center justify-center p-0 m-0 opacity-0 pointer-events-none transition-opacity duration-300">
     <div class="relative bg-white rounded-lg overflow-hidden shadow-lg w-11/12 max-w-2xl transform scale-90 transition-transform duration-300">
       <button id="service-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
       <div class="p-6">
@@ -146,7 +146,7 @@
       const detailEl = document.getElementById("service-modal-detail");
       const closeBtn = document.getElementById("service-close");
 
-      document.querySelectorAll("[data-detail]").forEach(card => {
+      document.querySelectorAll("#services [data-detail]").forEach(card => {
         card.addEventListener("click", () => {
           titleEl.textContent = card.getAttribute("data-title");
 
@@ -187,6 +187,7 @@
     });
   </script>
 </section>
+
   <section id="case-studies" class="min-h-screen flex flex-col items-center justify-center bg-[--color-surface] py-20 px-4">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-[--color-accent] mb-6">
@@ -271,7 +272,7 @@
   </div>
 
   <!-- Centered Modal with animation -->
-  <dialog id="cs-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-0 m-0 opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+  <dialog id="cs-modal" class="fixed inset-0 w-full h-full border-0 flex items-center justify-center p-0 m-0 opacity-0 pointer-events-none transition-opacity duration-300 z-50">
     <div class="relative bg-[--color-background] text-[--color-text] rounded-lg overflow-hidden shadow-xl w-11/12 max-w-2xl transform scale-90 transition-transform duration-300">
       <button id="cs-close" class="absolute top-4 right-4 text-[--color-muted] hover:text-[--color-accent] text-2xl leading-none">&times;</button>
       <div class="p-6">
@@ -289,7 +290,7 @@
       const closeBtn = document.getElementById("cs-close");
 
       // Open modal
-      document.querySelectorAll("[data-detail]").forEach(card => {
+      document.querySelectorAll("#case-studies [data-detail]").forEach(card => {
         card.addEventListener("click", () => {
           titleEl.textContent = card.getAttribute("data-title");
           detailEl.textContent = card.getAttribute("data-detail");
@@ -361,7 +362,7 @@
       </div>
     </div>
     <div class="mt-6 text-center text-xs text-[--color-muted]">
-      &copy; 2025 Deepalytics. All rights reserved.
+      &copy; 2026 Deepalytics. All rights reserved.
     </div>
   </footer>
 </body>
